@@ -519,13 +519,4 @@ section,
 .revert .bottom {
   -webkit-animation: reverse-bottom forwards 1s ease-in-out;
           animation: reverse-bottom forwards 1s ease-in-out;
-}
-
-.fixedcontainer {
-  width: 100%;
-  background-color: #2f3c7e;
-}
-
-.sticky {
-  position: fixed;
 }/*# sourceMappingURL=styles.css.map */
