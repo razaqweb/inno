@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #fec1c4;
+}
+
+ul {
+  list-style: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #2f3c7e;
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: #fefbfb;
+  font-family: "Rubik", sans-serif;
+}
+
+header {
+  padding: 2.4rem 4.8rem;
+  position: relative;
+}
+@media (min-width: 600px) {
+  header {
+    padding: 4.8rem;
+  }
+}
+
+section {
+  transition: all 0.5s ease-in-out;
+}
+
+section,
+.footer {
+  padding: 4.8rem 4.8rem;
+}
+@media (min-width: 600px) {
+  section,
+.footer {
+    padding: 9.6rem 4.8rem;
+  }
+}
+
+.secondary-heading {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 2.4rem;
+  letter-spacing: 1px;
+}
+@media (min-width: 600px) {
+  .secondary-heading {
+    font-size: 2rem;
+  }
+}
+
+.secondary-paragraph {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 3.2rem;
+}
+@media (min-width: 600px) {
+  .secondary-paragraph {
+    font-size: 1.4rem;
+  }
+}
+
+.logo {
+  font-family: "Nunito", sans-serif;
+  font-size: 3.2rem;
+  font-weight: 800;
+  letter-spacing: 2%;
+}
+
+.hidden {
+  display: none;
+  visibility: none;
+}
+
+.menu-active {
+  opacity: 1%;
+}/*# sourceMappingURL=generals.css.map */
