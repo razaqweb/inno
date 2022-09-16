@@ -3,10 +3,11 @@
 @import "./animations.scss";
 @import "./mixins.scss";
 
-//Navigation Section
+//Navigation Section////////////////
 .nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   position: relative;
 }
 
@@ -30,6 +31,7 @@
   height: 40px;
   width: 40px;
   background-color: rgba(51, 69, 156, 30%);
+  // top: 0;
   right: 0;
   border-radius: 100%;
   padding: 18px 10px;
@@ -69,12 +71,14 @@
 
 .mobile-nav-list {
   position: absolute;
-  right: 50%;
-  transform: translateX(50%);
+  right: 0;
+  left: 0;
+  // transform: translateX(50%);
+  z-index: 1;
   text-align: center;
-  height: 200px;
-  width: 100vw;
-  background-color: #1b265c;
+  // height: 200px;
+  // width: 100vw;
+  background-color: $menu-color;
   visibility: hidden;
   display: flex;
   flex-direction: column;
@@ -103,7 +107,7 @@
   animation: invis2vis 0.5s forwards ease-in-out;
 }
 
-//Hero Section
+//Hero Section/////////////////
 
 .hero-section {
   padding-top: 2.4rem;
@@ -112,44 +116,44 @@
     width: 80%;
 
     .hero-heading {
-      font-size: 1.8rem;
+      font-size: 3.2rem;
       font-weight: 700;
       margin-bottom: 10px;
       line-height: 115%;
       letter-spacing: -0.2px;
 
       @include for-tablet-portrait-up {
-        font-size: 3rem;
+        font-size: 4.8rem;
         margin-bottom: 15px;
       }
     }
 
     .hero-paragraph {
-      font-size: 1rem;
+      font-size: 1.6rem;
       font-weight: 300;
       line-height: 150%;
-      margin-bottom: 1rem;
+      margin-bottom: 2.4rem;
 
       @include for-tablet-portrait-up {
-        font-size: 1.6rem;
-        margin-bottom: 15px;
+        font-size: 2rem;
+        margin-bottom: 3.2rem;
       }
     }
 
     .learn-more {
       color: $next-pink;
-      font-size: 0.8rem;
+      font-size: 1.4rem;
       letter-spacing: 1.5px;
       font-weight: 500;
 
       @include for-tablet-portrait-up {
-        font-size: 1.4rem;
+        font-size: 1.6rem;
       }
     }
   }
 }
 
-//About Section
+//About Section////////////////
 
 .about-section {
   background-color: $white;
@@ -162,8 +166,13 @@
     grid-auto-rows: minmax(100px, auto);
     width: 100%;
 
+    @include for-tablet-portrait-up {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
     div {
       width: 100%;
+      height: 200px;
     }
 
     .img1,
@@ -173,10 +182,15 @@
     }
 
     .img1 {
-      height: 12rem;
+      // height: 12rem;
 
       background-image: url(../../img/img1.jpg);
       grid-column: 1/3;
+
+      @include for-tablet-portrait-up {
+        grid-column: 1/1;
+        // height: 100%;
+      }
     }
 
     .img2 {
@@ -189,7 +203,7 @@
   }
 }
 
-//Join the Family
+//Join the Family////////////////
 .join-the-family {
   background-color: $white;
   color: $primary-color;
@@ -199,51 +213,82 @@
     display: flex;
     flex-direction: column;
     gap: 2.4rem;
+    margin-top: 4.8rem;
+
+    @include for-tablet-portrait-up {
+      margin-top: 6.4rem;
+    }
 
     .join-list-item {
-      font-size: 1rem;
+      font-size: 1.6rem;
 
       @include for-tablet-portrait-up {
-        font-size: 1.4rem;
+        font-size: 2rem;
       }
     }
   }
+
+  .click-here {
+    position: relative;
+    font-weight: 600;
+
+    .activities-link {
+      color: $primary-color;
+    }
+  }
+
+  .click-here::after {
+    content: " ";
+    background-color: $next-pink;
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    border-radius: 50px;
+  }
 }
+
+////////////Footer///////////
 
 .footer {
   background-color: $secondary-color;
   color: $primary-color;
   padding: 2.4rem 4.8rem;
 
-  .footer-container {
+  .logo-and-icon-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    gap: 2.4rem;
-    font-size: 6px;
+    justify-content: center;
+    gap: 1.6rem;
 
-    .logo {
-      font-size: 2.4rem;
+    .social-media-icons {
+      width: 100%;
+      display: flex;
+      gap: 1.6rem;
+      align-items: center;
+      justify-content: center;
+    }
+    margin-bottom: 3.2rem;
+  }
+
+  .footer-address {
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 1.4rem;
+
+    @include for-tablet-portrait-up {
+      font-size: 1.4rem;
     }
   }
-}
 
-.address-list {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.footer-flex-left {
-  align-self: flex-start;
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-
-  .social-media-icons {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  .copyright-text {
+    text-align: center;
+    font-size: 0.8rem;
+    @include for-tablet-portrait-up {
+      font-size: 1rem;
+    }
   }
 }
 

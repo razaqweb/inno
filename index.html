@@ -21,33 +21,45 @@
     <script defer src="./index.js"></script>
   </head>
   <body>
-    <div class="fixedcontainer">
-
-      <header>
-        <nav class="nav">
-          <span class="logo">inno</span>
-          <ul class="nav-list">
-            <li class="nav-item"><a href="#" class="nav-link">HOME</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">ABOUT</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">ACTIVITIES</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">HOW TO JOIN</a></li>
+    <header>
+      <nav class="nav">
+        <span class="logo">inno</span>
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#hero" class="nav-link">HOME</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link">ABOUT</a></li>
+          <li class="nav-item">
+            <a
+              href="./pages/activities.html"
+              target="_blank"
+              class="nav-link activities-link"
+              >ACTIVITIES</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#family" class="nav-link">HOW TO JOIN</a>
+          </li>
         </ul>
         <div class="hamburger revert">
           <span class="top"></span>
           <span class="middle"></span>
           <span class="bottom"></span>
         </div>
-      </div>
-    </nav>
-    <div class="mobile-nav-list">
-      <a href="" class="mobile-nav-link">HOME</a>
-      <a href="" class="mobile-nav-link">ABOUT</a>
-      <a href="" class="mobile-nav-link">ACTIVITIES</a>
-      <a href="" class="mobile-nav-link">HOW TO JOIN</a>
-    </div>
-    
-  </header>
-</div>
+      </nav>
+
+      <ul class="mobile-nav-list">
+        <li><a href="#hero" class="mobile-nav-link">HOME</a></li>
+        <li><a href="#about" class="mobile-nav-link">ABOUT</a></li>
+        <li>
+          <a
+            href="./pages/activities.html"
+            class="mobile-nav-link mobile-activities-link"
+            >ACTIVITIES</a
+          >
+        </li>
+        <li><a href="#family" class="mobile-nav-link">HOW TO JOIN</a></li>
+      </ul>
+    </header>
+
     <main>
       <!-- Hero Section -->
       <section class="hero-section" id="hero">
@@ -60,7 +72,10 @@
             our nation.
           </p>
           <span class="learn-more"
-            ><a href="" class="learn-link"
+            ><a
+              href="./pages/activities.html"
+              class="learn-link"
+              target="_blank"
               >LEARN MORE <i class="fa-solid fa-arrow-down"></i></a
           ></span>
         </div>
@@ -102,8 +117,10 @@
             INNO is completely free to join, there are no tiers to membership
             either. However, please ensure you are committed to volunteering
             with us before considering signing up. If you want to know more
-            about our activities, click here. Otherwise, follow the steps below
-            to begin your registration
+            about our activities,
+            <span class="click-here"
+              ><a href="#" class="activities-link">click here</a></span
+            >. Otherwise, follow the steps below to begin your registration
           </p>
           <ul class="join-list">
             <li class="join-list-item">
@@ -129,35 +146,24 @@
       </section>
     </main>
     <footer class="footer" id="footer">
-      <div class="footer-container">
-        <div class="footer-flex-left">
-          <span class="logo">inno</span>
-          <div class="social-media-icons">
-            <i class="fa-brands fa-xl fa-instagram"></i>
-            <i class="fa-brands fa-xl fa-twitter"></i>
-            <i class="fa-brands fa-xl fa-facebook"></i>
-          </div>
-        </div>
-        <div class="footer-flex-middle">
-          <ul class="address-list">
-            <li class="address-item">Mbezi Beach, Tangi Bovu</li>
-            <li class="address-item">Dar Es Salaam,</li>
-            <li class="address-item">Tanzania</li>
-            <li class="address-item">P.O Box: 90234</li>
-          </ul>
-        </div>
-        <div class="footer-flex-right">
-          <ul class="address-list">
-            <li class="address-item">Email: info@inno.co.tz</li>
-            <li class="address-item">Cell: +255778009925</li>
-            <li class="address-item">
-              &copy; Copyright <span class="copyright-date"></span>. All rights
-              Reserved.
-            </li>
-            <li class="address-item">P.O Box: 90234</li>
-          </ul>
+      <div class="logo-and-icon-container">
+        <span class="logo">inno</span>
+        <div class="social-media-icons">
+          <i class="fa-brands fa-xl fa-instagram"></i>
+          <i class="fa-brands fa-xl fa-facebook"></i>
+          <i class="fa-brands fa-xl fa-twitter"></i>
         </div>
       </div>
+      <p class="footer-address">
+        Mbezi Beach, Tangi Bovu &vert; Dar Es Salaam, Tanzaina &vert; P.O Box:
+        9024
+      </p>
+      <p class="footer-address">
+        Cell: +255778009925 &vert; Email: info@inno.co.tz
+      </p>
+      <p class="copyright-text">
+        &copy; Copyright <span class="copyright"></span>. All rights reserved
+      </p>
     </footer>
   </body>
 </html>

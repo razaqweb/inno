@@ -5,6 +5,8 @@ const menuBottom = document.querySelector(".bottom");
 const sections = document.querySelectorAll("section");
 const mobileNav = document.querySelector(".mobile-nav-list");
 const headerContainer = document.querySelector("fixedcontainer");
+const normalNav = document.querySelector(".nav-list");
+const mobileNavLink = document.querySelectorAll(".mobile-nav-link");
 
 //Event Listeners
 hamburger.addEventListener("click", (e) => {
@@ -26,4 +28,43 @@ hamburger.addEventListener("click", (e) => {
   sections.forEach((section) => {
     section.classList.toggle("menu-active");
   });
+});
+
+//smoothScrolling
+
+normalNav.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  const id = e.target.getAttribute("href");
+
+  if (
+    !e.target.classList.contains("nav-link") ||
+    e.target.classList.contains("activities-link")
+  )
+    return;
+
+  console.log(id);
+
+  document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+});
+
+mobileNav.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  const id = e.target.getAttribute("href");
+  if (
+    !e.target.classList.contains("mobile-nav-link") ||
+    e.target.classList.contains("mobile-activities-link")
+  )
+    return;
+
+  console.log(id);
+  mobileNav.classList.add("invisible");
+  mobileNav.classList.remove("visible");
+  sections.forEach((section) => {
+    section.classList.remove("menu-active");
+  });
+  document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+
+  hamburger.classList.toggle("revert");
 });
