@@ -33,8 +33,6 @@ hamburger.addEventListener("click", (e) => {
 //smoothScrolling
 
 normalNav.addEventListener("click", (e) => {
-  e.preventDefault();
-
   const id = e.target.getAttribute("href");
 
   if (
@@ -45,12 +43,11 @@ normalNav.addEventListener("click", (e) => {
 
   console.log(id);
 
+  e.preventDefault();
   document.querySelector(id).scrollIntoView({ behavior: "smooth" });
 });
 
 mobileNav.addEventListener("click", (e) => {
-  e.preventDefault();
-
   const id = e.target.getAttribute("href");
   if (
     !e.target.classList.contains("mobile-nav-link") ||
@@ -58,6 +55,7 @@ mobileNav.addEventListener("click", (e) => {
   )
     return;
 
+  e.preventDefault();
   console.log(id);
   mobileNav.classList.add("invisible");
   mobileNav.classList.remove("visible");
